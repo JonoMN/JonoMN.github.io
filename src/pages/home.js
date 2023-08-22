@@ -15,10 +15,6 @@ import { useCallback } from "react";
 function Home() {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
     await loadSlim(engine);
   }, []);
 
@@ -78,7 +74,7 @@ function Home() {
             interactivity: {
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: "push",
                 },
                 onHover: {
@@ -142,11 +138,17 @@ function Home() {
       <div style={{ width: "100%", position: "absolute", top: "30vh" }}>
         <Container
           style={{
-            height: "1000px",
+            height: "800px",
           }}
         >
-          <Card mt="3" style={{ width: "50%" }}>
+          <Card
+            style={{ background: "rgba(30, 30, 30, 0.9)" }}
+            sx={{ p: 2, width: "75%" }}
+          >
             <Typography variant="h1">Jonathan Nelson</Typography>
+            <Typography variant="h3" color="text.secondary">
+              Aspiring Fullstack Developer
+            </Typography>
           </Card>
         </Container>
         <Container style={{ color: "white", textAlign: "justify" }}>

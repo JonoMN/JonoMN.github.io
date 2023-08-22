@@ -20,10 +20,18 @@ function NavBar() {
     >
       <Toolbar>
         <Container component="div" sx={{ flexGrow: 1 }}>
-          <IconButton aria-label="LinkedIn" color="inherit">
+          <IconButton
+            aria-label="LinkedIn"
+            color="inherit"
+            href="https://www.linkedin.com/in/jonathan-m-nelson/"
+          >
             <LinkedInIcon />
           </IconButton>
-          <IconButton aria-label="GitHub" color="inherit">
+          <IconButton
+            aria-label="GitHub"
+            color="inherit"
+            href="https://github.com/JonoMN/"
+          >
             <GitHubIcon />
           </IconButton>
         </Container>
