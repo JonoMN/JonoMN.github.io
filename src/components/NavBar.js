@@ -15,7 +15,7 @@ function NavBar() {
     <AppBar
       position="fixed"
       style={{
-        background: "rgba(41, 41, 41, 0.3)",
+        background: "rgba(30, 30, 30, 0.9)",
       }}
     >
       <Toolbar>
@@ -26,10 +26,10 @@ function NavBar() {
           <IconButton aria-label="GitHub" color="inherit">
             <GitHubIcon />
           </IconButton>
-          <IconButton aria-label="home" color="inherit" component={Link} to="/">
-            <HomeIcon />
-          </IconButton>
         </Container>
+        <Button color="inherit" component={Link} to="/">
+          Home
+        </Button>
         <Button color="inherit" component={Link} to="/projects">
           Projects
         </Button>

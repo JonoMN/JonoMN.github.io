@@ -7,7 +7,14 @@ import Item from "@mui/material/Grid";
 
 function Blog() {
   return (
-    <div>
+    <div
+      style={{
+        width: "100%",
+        position: "absolute",
+        top: "0vh",
+        backgroundColor: "#121212",
+      }}
+    >
       <Container
         className="aboutMe"
         style={{ color: "white", textAlign: "justify" }}
