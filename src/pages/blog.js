@@ -3,10 +3,12 @@ import "../App.css";
 import Blog from "../components/Blog";
 
 import React from "react";
+import Box from "@mui/material/Box";
 
 // MUI Grid
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
+import Divider from "@mui/material/Divider";
 
 function Blogs() {
   return (
@@ -23,13 +25,22 @@ function Blogs() {
         style={{ color: "white", textAlign: "justify", paddingTop: "8vh" }}
       >
         <h1>Blog</h1>
-        <Grid container spacing={4}>
-          <Grid item>
-            <Item style={{ paddingBottom: "10px" }}>
-              <Blog></Blog>
-            </Item>
-          </Grid>
-        </Grid>
+
+        <Box>
+          <Item style={{ paddingBottom: "10px" }}>
+            <Blog></Blog>
+          </Item>
+          <Divider variant="middle" />
+
+          <Item style={{ paddingBottom: "10px" }}>
+            <Blog></Blog>
+          </Item>
+          <Divider variant="middle" />
+
+          <Item style={{ paddingBottom: "10px" }}>
+            <Blog></Blog>
+          </Item>
+        </Box>
       </Container>
     </div>
   );

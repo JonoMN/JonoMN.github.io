@@ -95,13 +95,13 @@ function Home() {
             },
             particles: {
               color: {
-                value: "#ffffff",
+                value: "#808080",
               },
               links: {
                 color: "#ffffff",
                 distance: 150,
                 enable: true,
-                opacity: 0.5,
+                opacity: 0.2,
                 width: 1,
               },
               move: {
@@ -141,15 +141,15 @@ function Home() {
             height: "800px",
           }}
         >
-          <Card
+          {/* <Card
             style={{ background: "rgba(30, 30, 30, 0.9)" }}
             sx={{ p: 2, width: "75%" }}
-          >
-            <Typography variant="h1">Jonathan Nelson</Typography>
-            <Typography variant="h3" color="text.secondary">
-              Aspiring Fullstack Developer
-            </Typography>
-          </Card>
+          > */}
+          <Typography variant="h1">Jonathan Nelson</Typography>
+          <Typography variant="h3" color="text.secondary">
+            Aspiring Fullstack Developer
+          </Typography>
+          {/* </Card> */}
         </Container>
         <Container style={{ color: "white", textAlign: "justify" }}>
           <h1>About Me</h1>
