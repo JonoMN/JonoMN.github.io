@@ -8,29 +8,27 @@ import CardMedia from "@mui/material/CardMedia";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
-function Blog() {
+function Blog({ title, date, topics, desc, link }) {
   return (
-    <Box sx={{ pt: 3, pb: 3 }}>
-      <Typography variant="subtitle1" color="text.secondary" component="div">
-        22/08/23
-      </Typography>
-      <Typography component="div" variant="h4">
-        Who the hell is CORs, and why is he breaking my website?
-      </Typography>
+    <Box>
+      <Box sx={{ pt: 3, pb: 3 }}>
+        <Typography variant="subtitle1" color="text.secondary" component="div">
+          {date}
+        </Typography>
+        <Typography component="div" variant="h4">
+          {title}
+        </Typography>
 
-      <Typography variant="subtitle1" color="text.secondary" component="div">
-        CORs • AWS • Node
-      </Typography>
-      <Typography variant="body2" color="text.secondary" component="div">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        lacinia nec augue ac aliquam. Fusce consectetur, enim at blandit
-        volutpat, nisl turpis bibendum eros, eget congue nunc turpis quis erat.
-        Quisque tincidunt, sapien a ultricies egestas, sapien arcu sollicitudin
-        purus, ut efficitur enim leo nec metus. Suspendisse sed rhoncus urna.
-        Vestibulum ut malesuada turpis, non aliquam nisl. Nullam sodales
-        lobortis libero, non congue risus semper quis.
-      </Typography>
+        <Typography variant="subtitle1" color="text.secondary" component="div">
+          {topics}
+        </Typography>
+        <Typography variant="body2" color="text.secondary" component="div">
+          {desc}
+        </Typography>
+      </Box>
+      <Divider variant="middle" />
     </Box>
   );
 }
