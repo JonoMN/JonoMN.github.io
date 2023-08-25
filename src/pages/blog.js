@@ -68,7 +68,7 @@ function Blogs() {
         className="aboutMe"
         style={{ color: "white", textAlign: "justify", paddingTop: "8vh" }}
       >
-        <h1>Blog</h1>
+        <h1>/blog</h1>
         <div>{componentsArr}</div>
       </Container>
     </div>
