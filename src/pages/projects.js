@@ -7,6 +7,7 @@ import React from "react";
 // MUI Grid
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
+import { Typography } from "@mui/material";
 
 function Projects() {
   let projects = [
@@ -51,17 +52,11 @@ function Projects() {
   return (
     <div
       style={{
-        width: "100%",
-        height: "100%",
-        position: "absolute",
         backgroundColor: "#121212",
       }}
     >
-      <Container
-        className="aboutMe"
-        style={{ color: "white", textAlign: "justify", paddingTop: "8vh" }}
-      >
-        <h1>/projects</h1>
+      <Container style={{ color: "white", paddingTop: "10vh" }}>
+        <Typography variant="h4">/ PROJECTS</Typography>
         <Grid container>{componentsArr}</Grid>
       </Container>
     </div>
