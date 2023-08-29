@@ -36,16 +36,13 @@ function NavBar() {
           </IconButton>
         </Container>
         <Button color="inherit" component={Link} to="/">
-          Home
+          / Home
         </Button>
         <Button color="inherit" component={Link} to="/projects">
-          Projects
+          / Projects
         </Button>
         <Button color="inherit" component={Link} to="/blog">
-          Blog
-        </Button>
-        <Button color="inherit" component={Link} to="/contact">
-          Contact
+          / Blog
         </Button>
       </Toolbar>
     </AppBar>
