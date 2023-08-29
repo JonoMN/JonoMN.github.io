@@ -4,10 +4,12 @@ import "../App.css";
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
-import background from "../img/BG-Test1.jpg";
+import QUT from "../img/QUT-Logo.png";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import { loadSlim } from "tsparticles-slim";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -16,6 +18,8 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 
 import Particles from "react-particles";
 import { useCallback } from "react";
@@ -51,7 +55,6 @@ function Home() {
 
   const backgroundTop = {
     opacity: opacity,
-    backgroundImage: `url(${background})`,
     height: "200vh",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -290,36 +293,59 @@ function Home() {
                 </Timeline>
               </Item>
             </Grid>
-            <Grid item xs={12}>
-              <h1>My Interests</h1>
+            <Box>
+              <h1>My Education</h1>
               <Item>
-                <p>
-                  Software development has been a passion of mine since I bought
-                  my first computer, it motivates me to know that my work will
-                  one day drive innovation and productivity in the world. In
-                  conjunction with my love for computers, I have always been
-                  hungry for self-growth in all aspects of my life. I am eager
-                  to gain access to opportunities that will improve my teamwork,
-                  leadership and problem-solving.
-                </p>
-                <p>
-                  My Computer Science degree has strongly prepared me for the
-                  technical challenges I will face in any role. During my
-                  computer science degree, I specialised in Full Stack
-                  development coming to a pinnacle with the successful
-                  development of a greenfield app for the financial consulting
-                  business, BUSINESSNAV.
-                </p>
-                <p>
-                  Beyond technical skills, my extra value comes from my Business
-                  Management degree and the lessons I have learnt from working
-                  in previous teams. My business degree and previous experience
-                  have enhanced my project management, client communication,
-                  team collaboration and innovation skills while also giving me
-                  a greater understanding of general business operations.
-                </p>
+                <Grid container spacing={2}>
+                  <Grid item xs={12}>
+                    <Card sx={{ display: "flex" }}>
+                      <CardMedia
+                        component="img"
+                        sx={{ width: 100 }}
+                        image={QUT}
+                        alt="QUT Logo"
+                      />
+                      <Box sx={{ display: "flex", flexDirection: "column" }}>
+                        <CardContent>
+                          <Typography variant="h5">Bachelor IT</Typography>
+                          <Typography
+                            variant="subtitle1"
+                            color="text.secondary"
+                            component="div"
+                          >
+                            Major Computer Science
+                          </Typography>
+                        </CardContent>
+                      </Box>
+                    </Card>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Card sx={{ display: "flex" }}>
+                      <CardMedia
+                        component="img"
+                        sx={{ width: 100 }}
+                        image={QUT}
+                        alt="QUT Logo"
+                      />
+                      <Box sx={{ display: "flex", flexDirection: "column" }}>
+                        <CardContent>
+                          <Typography variant="h5">
+                            Bachelor Business
+                          </Typography>
+                          <Typography
+                            variant="subtitle1"
+                            color="text.secondary"
+                            component="div"
+                          >
+                            Major Management
+                          </Typography>
+                        </CardContent>
+                      </Box>
+                    </Card>
+                  </Grid>
+                </Grid>
               </Item>
-            </Grid>
+            </Box>
           </Grid>
         </Container>
       </div>
