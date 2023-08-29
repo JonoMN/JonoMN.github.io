@@ -9,6 +9,14 @@ import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import { loadSlim } from "tsparticles-slim";
 
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+
 import Particles from "react-particles";
 import { useCallback } from "react";
 
@@ -145,16 +153,19 @@ function Home() {
             style={{ background: "rgba(30, 30, 30, 0.9)" }}
             sx={{ p: 2, width: "75%" }}
           > */}
-          <Typography variant="h1">Jonathan Nelson</Typography>
+          <Typography variant="h1">JONATHAN NELSON</Typography>
           <Typography variant="h3" color="text.secondary">
-            Aspiring Fullstack Developer
+            //Aspiring Fullstack Developer
           </Typography>
           {/* </Card> */}
         </Container>
-        <Container style={{ color: "white", textAlign: "justify" }}>
-          <h1>About Me</h1>
+        <Container
+          style={{ color: "white", textAlign: "justify" }}
+          sx={{ width: "50%", margin: "auto" }}
+        >
           <Grid container spacing={4}>
-            <Grid item xs={7}>
+            <Grid item xs={12}>
+              <h1>About Me</h1>
               <Item>
                 <p>
                   Software development has been a passion of mine since I bought
@@ -183,8 +194,131 @@ function Home() {
                 </p>
               </Item>
             </Grid>
-            <Grid item xs={5}>
-              <Item>xs=4</Item>
+            <Grid item xs={12}>
+              <h1>My Experience</h1>
+              <Item>
+                <Timeline position="alternate">
+                  <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">
+                      Jun 2016 - May 2021
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography variant="h6" component="span">
+                        Team Member
+                      </Typography>
+                      <Typography>Woolworths</Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">
+                      May 2021 - Sep 2022
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography variant="h6" component="span">
+                        Software & Systems Developer
+                      </Typography>
+                      <Typography>Mecha</Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">
+                      Sep 2021 - Sep 2022
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography variant="h6" component="span">
+                        Corporate Events Director
+                      </Typography>
+                      <Typography>BAMSA</Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">
+                      Sep 2022 - Sep 2023
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography variant="h6" component="span">
+                        President
+                      </Typography>
+                      <Typography>BAMSA</Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">
+                      Oct 2022 - Current
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                      <TimelineDot />
+                      <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography variant="h6" component="span">
+                        IT Officer
+                      </Typography>
+                      <Typography>ACRRM</Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineOppositeContent color="text.secondary">
+                      Future
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                      <TimelineDot />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography variant="h6" component="span">
+                        #1 Fullstack Developer
+                      </Typography>
+                      <Typography>Earth</Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                </Timeline>
+              </Item>
+            </Grid>
+            <Grid item xs={12}>
+              <h1>My Interests</h1>
+              <Item>
+                <p>
+                  Software development has been a passion of mine since I bought
+                  my first computer, it motivates me to know that my work will
+                  one day drive innovation and productivity in the world. In
+                  conjunction with my love for computers, I have always been
+                  hungry for self-growth in all aspects of my life. I am eager
+                  to gain access to opportunities that will improve my teamwork,
+                  leadership and problem-solving.
+                </p>
+                <p>
+                  My Computer Science degree has strongly prepared me for the
+                  technical challenges I will face in any role. During my
+                  computer science degree, I specialised in Full Stack
+                  development coming to a pinnacle with the successful
+                  development of a greenfield app for the financial consulting
+                  business, BUSINESSNAV.
+                </p>
+                <p>
+                  Beyond technical skills, my extra value comes from my Business
+                  Management degree and the lessons I have learnt from working
+                  in previous teams. My business degree and previous experience
+                  have enhanced my project management, client communication,
+                  team collaboration and innovation skills while also giving me
+                  a greater understanding of general business operations.
+                </p>
+              </Item>
             </Grid>
           </Grid>
         </Container>

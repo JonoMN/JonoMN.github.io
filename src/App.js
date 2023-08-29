@@ -2,6 +2,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./pages/home";
 import Blog from "./pages/blog";
+import Blog1_CORs from "./blogs/1_Cors";
 import Contact from "./pages/contact";
 import Projects from "./pages/projects";
 import React from "react";
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/CORs" element={<Blog1_CORs />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </body>

@@ -1,5 +1,6 @@
 import temp1 from "../img/BNAV MockUp.png";
 import { CardActionArea } from "@mui/material";
+import { Link } from "react-router-dom";
 
 // MUI Card
 import Card from "@mui/material/Card";
@@ -14,19 +15,29 @@ function Blog({ title, date, topics, desc, link }) {
   return (
     <Box>
       <Box sx={{ pt: 3, pb: 3 }}>
-        <Typography variant="subtitle1" color="text.secondary" component="div">
-          {date}
-        </Typography>
-        <Typography component="div" variant="h4">
-          {title}
-        </Typography>
+        <CardActionArea component={Link} to={link}>
+          <Typography
+            variant="subtitle1"
+            color="text.secondary"
+            component="div"
+          >
+            {date}
+          </Typography>
+          <Typography component="div" variant="h4">
+            {title}
+          </Typography>
 
-        <Typography variant="subtitle1" color="text.secondary" component="div">
-          {topics}
-        </Typography>
-        <Typography variant="body2" color="text.secondary" component="div">
-          {desc}
-        </Typography>
+          <Typography
+            variant="subtitle1"
+            color="text.secondary"
+            component="div"
+          >
+            {topics}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" component="div">
+            {desc}
+          </Typography>
+        </CardActionArea>
       </Box>
       <Divider variant="middle" />
     </Box>

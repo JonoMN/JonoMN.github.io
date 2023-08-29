@@ -22,8 +22,8 @@ function Blogs() {
       Name: "Who the hell is CORs, and why is he breaking my website?",
       Date: "23/07/2023",
       Topics: "CORs • Same-Origin Policy • CSRF",
-      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam. Fusce consectetur, enim at blandit volutpat, nisl turpis bibendum eros, eget congue nunc turpis quis erat. Quisque tincidunt, sapien a ultricies egestas, sapien arcu sollicitudin purus, ut efficitur enim leo nec metus. Suspendisse sed rhoncus urna. Vestibulum ut malesuada turpis, non aliquam nisl. Nullam sodales lobortis libero, non congue risus semper quis.",
-      Link: "",
+      Desc: "What is CORS and why am I writing about it? Because it has been a thorn in my side for too long and I need a better understanding of how it works. The way I have learnt to understand CORS is that it is a stage in a complex resolution to a simple problem. The stages include the issue (CSRF), the resolution (SOP) and the relaxation of the resolution (CORS).",
+      Link: "/blog/Cors",
     },
     {
       Name: "Sorting algorithms, which one would win in a race?",
@@ -33,7 +33,7 @@ function Blogs() {
       Link: "",
     },
     {
-      Name: "What's a backend framework and where can I find one?",
+      Name: "What's a backend framework and where are they hiding?",
       Date: "04/09/2023",
       Topics: "Backend Frameworks",
       Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam. Fusce consectetur, enim at blandit volutpat, nisl turpis bibendum eros, eget congue nunc turpis quis erat. Quisque tincidunt, sapien a ultricies egestas, sapien arcu sollicitudin purus, ut efficitur enim leo nec metus. Suspendisse sed rhoncus urna. Vestibulum ut malesuada turpis, non aliquam nisl. Nullam sodales lobortis libero, non congue risus semper quis.",
