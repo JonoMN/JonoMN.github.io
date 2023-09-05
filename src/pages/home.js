@@ -49,9 +49,6 @@ function Home() {
   const backgroundTop = {
     opacity: opacity,
     height: "200vh",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
   };
 
   return (
@@ -60,7 +57,7 @@ function Home() {
         width: "100%",
         position: "absolute",
         top: "0vh",
-        backgroundColor: "#121212",
+        backgroundColor: "#000626",
       }}
     >
       <div style={backgroundTop}>
@@ -71,7 +68,7 @@ function Home() {
           options={{
             background: {
               color: {
-                value: "#121212",
+                value: "#000626",
               },
             },
             fpsLimit: 120,

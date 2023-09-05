@@ -9,13 +9,15 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Blog from "../pages/blog";
 import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
+import "../App.css";
 
 function NavBar() {
   return (
     <AppBar
       position="fixed"
+      className="navbar"
       style={{
-        background: "rgba(30, 30, 30, 0.9)",
+        background: "rgba(355, 355, 355, 0.15)",
       }}
     >
       <Toolbar>
