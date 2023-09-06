@@ -52,7 +52,10 @@ function Projects() {
   return (
     <div
       style={{
-        backgroundColor: "#121212",
+        backgroundColor: "#000626",
+        width: "100%",
+        height: "100%",
+        position: "absolute",
       }}
     >
       <Container style={{ color: "white", paddingTop: "10vh" }}>

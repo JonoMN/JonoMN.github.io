@@ -1,5 +1,6 @@
 import temp1 from "../img/BNAV MockUp.png";
 import { CardActionArea } from "@mui/material";
+import "../App.css";
 
 // MUI Card
 import Card from "@mui/material/Card";
@@ -31,13 +32,13 @@ function Project({ title, topics, desc, link, image }) {
 
         {isHovered ? (
           <Box
+            className="navbar"
             sx={{
               position: "absolute",
               bottom: 0,
               left: 0,
               width: "100%",
               bgcolor: "rgba(0, 0, 0, 0.8)",
-              color: "white",
               padding: "10px",
             }}
           >

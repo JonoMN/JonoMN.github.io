@@ -8,6 +8,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Typography } from "@mui/material";
 
 const darkTheme = createTheme({
   palette: {
