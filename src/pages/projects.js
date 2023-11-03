@@ -25,13 +25,6 @@ function Projects() {
       Link: "",
       Image: require("../img/FinanceTracker.png"),
     },
-    {
-      Name: "Event Ticketing System",
-      Topics: "Bootstrap • Flask • MySQL",
-      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
-      Link: "",
-      Image: require("../img/BNAV MockUp.png"),
-    },
   ];
 
   let componentsArr = [];

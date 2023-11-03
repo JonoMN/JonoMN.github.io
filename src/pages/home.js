@@ -53,11 +53,7 @@ function Home() {
   };
 
   return (
-    <div
-      style={{
-        backgroundColor: "#000626",
-      }}
-    >
+    <div className="gradient_background">
       <div style={backgroundTop}>
         <Particles
           id="tsparticles"
@@ -147,15 +143,11 @@ function Home() {
           }}
         >
           <Typography variant="h1">JONATHAN NELSON</Typography>
-          <Typography variant="h3" color="text.secondary">
+          <Typography variant="h3" color="#FF3A20">
             //Aspiring Fullstack Developer
           </Typography>
         </Container>
-        <div
-          style={{
-            backgroundColor: "#000626",
-          }}
-        >
+        <div className="gradient_background">
           <Container
             style={{ color: "white", textAlign: "justify" }}
             sx={{ width: "50%", margin: "auto" }}
@@ -256,9 +248,36 @@ function Home() {
                 </Grid>
               </Item>
             </Box>
-            <Box sx={{ pt: 10, pb: 3 }}>
+            <Box
+              sx={{
+                pt: 10,
+                pb: 3,
+                width: "60%",
+                margin: "auto",
+              }}
+            >
               <Typography align="center" color="text.secondary">
-                Built on dreams & late nights.
+                Loosely designed in{" "}
+                <Typography color="text.primary" component="span">
+                  Figma
+                </Typography>{" "}
+                and coded in{" "}
+                <Typography color="text.primary" component="span">
+                  VS Code
+                </Typography>{" "}
+                by yours truly. Built with{" "}
+                <Typography color="text.primary" component="span">
+                  React
+                </Typography>{" "}
+                and{" "}
+                <Typography color="text.primary" component="span">
+                  MUI Core
+                </Typography>
+                , deployed with{" "}
+                <Typography color="text.primary" component="span">
+                  GitHub Pages
+                </Typography>
+                .
               </Typography>
             </Box>
           </Container>

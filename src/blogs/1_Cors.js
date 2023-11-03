@@ -20,7 +20,7 @@ function Blogs() {
         width: "100%",
         height: "100%",
         position: "absolute",
-        backgroundColor: "#121212",
+        backgroundColor: "#000626",
       }}
     >
       <Container

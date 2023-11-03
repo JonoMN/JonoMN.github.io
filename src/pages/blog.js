@@ -40,6 +40,13 @@ function Blogs() {
       Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam. Fusce consectetur, enim at blandit volutpat, nisl turpis bibendum eros, eget congue nunc turpis quis erat. Quisque tincidunt, sapien a ultricies egestas, sapien arcu sollicitudin purus, ut efficitur enim leo nec metus. Suspendisse sed rhoncus urna. Vestibulum ut malesuada turpis, non aliquam nisl. Nullam sodales lobortis libero, non congue risus semper quis.",
       Link: "",
     },
+    {
+      Name: "What's a backend framework and where are they hiding?",
+      Date: "04/09/2023",
+      Topics: "Backend Frameworks",
+      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam. Fusce consectetur, enim at blandit volutpat, nisl turpis bibendum eros, eget congue nunc turpis quis erat. Quisque tincidunt, sapien a ultricies egestas, sapien arcu sollicitudin purus, ut efficitur enim leo nec metus. Suspendisse sed rhoncus urna. Vestibulum ut malesuada turpis, non aliquam nisl. Nullam sodales lobortis libero, non congue risus semper quis.",
+      Link: "",
+    },
   ];
 
   let componentsArr = [];
