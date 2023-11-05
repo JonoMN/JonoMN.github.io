@@ -23,7 +23,10 @@ function Blog({ title, date, topics, desc, link }) {
           >
             {date}
           </Typography>
-          <Typography component="div" variant="h4">
+          <Typography
+            component="div"
+            sx={{ typography: { xs: "h6", md: "h4" } }}
+          >
             {title}
           </Typography>
 
@@ -34,7 +37,12 @@ function Blog({ title, date, topics, desc, link }) {
           >
             {topics}
           </Typography>
-          <Typography variant="body2" color="text.secondary" component="div">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            component="div"
+            sx={{ display: { xs: "none", md: "block" } }}
+          >
             {desc}
           </Typography>
         </CardActionArea>

@@ -145,11 +145,13 @@ function Home() {
             height: "800px",
           }}
         >
-          <Typography sx={{ typography: { xs: "h4", md: "h2", lg: "h1" } }}>
+          <Typography
+            sx={{ typography: { xs: "h4", sm: "h3", md: "h2", lg: "h1" } }}
+          >
             JONATHAN NELSON
           </Typography>
           <Typography
-            sx={{ typography: { xs: "h6", md: "h4", lg: "h3" } }}
+            sx={{ typography: { xs: "h6", sm: "h5", md: "h4", lg: "h3" } }}
             color="#FF3A20"
           >
             //Aspiring Fullstack Developer
