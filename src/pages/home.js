@@ -145,73 +145,77 @@ function Home() {
             height: "800px",
           }}
         >
-          <Typography variant="h1">JONATHAN NELSON</Typography>
-          <Typography variant="h3" color="#FF3A20">
+          <Typography sx={{ typography: { xs: "h4", md: "h2", lg: "h1" } }}>
+            JONATHAN NELSON
+          </Typography>
+          <Typography
+            sx={{ typography: { xs: "h6", md: "h4", lg: "h3" } }}
+            color="#FF3A20"
+          >
             //Aspiring Fullstack Developer
           </Typography>
         </Container>
-        <div className="gradient_background">
-          <Container
-            style={{ color: "white", textAlign: "justify" }}
-            sx={{ width: { xs: "80%", lg: "60%" }, margin: "auto" }}
-          >
-            <h1>About Me</h1>
-            <Item>
-              <p>
-                Software development has been a passion of mine since I bought
-                my first computer, it motivates me to know that my work will one
-                day drive innovation and productivity in the world. In
-                conjunction with my love for computers, I have always been
-                hungry for self-growth in all aspects of my life. I am eager to
-                gain access to opportunities that will improve my teamwork,
-                leadership and problem-solving.
-              </p>
-              <p>
-                My Computer Science degree has strongly prepared me for the
-                technical challenges I will face in any role. During my computer
-                science degree, I specialised in Full Stack development coming
-                to a pinnacle with the successful development of a greenfield
-                app for the financial consulting business, BUSINESSNAV.
-              </p>
-              <p>
-                Beyond technical skills, my extra value comes from my Business
-                Management degree and the lessons I have learnt from working in
-                previous teams. My business degree and previous experience have
-                enhanced my project management, client communication, team
-                collaboration and innovation skills while also giving me a
-                greater understanding of general business operations.
-              </p>
-            </Item>
 
-            <Box sx={{ pt: 5 }}>
-              <h1>My Experience</h1>
-              <TimelineComponent />
-            </Box>
+        <Container
+          style={{ color: "white", textAlign: "justify" }}
+          sx={{ width: { xs: "80%", lg: "60%" }, margin: "auto" }}
+        >
+          <h1>About Me</h1>
+          <Item>
+            <p>
+              Software development has been a passion of mine since I bought my
+              first computer, it motivates me to know that my work will one day
+              drive innovation and productivity in the world. In conjunction
+              with my love for computers, I have always been hungry for
+              self-growth in all aspects of my life. I am eager to gain access
+              to opportunities that will improve my teamwork, leadership and
+              problem-solving.
+            </p>
+            <p>
+              My Computer Science degree has strongly prepared me for the
+              technical challenges I will face in any role. During my computer
+              science degree, I specialised in Full Stack development coming to
+              a pinnacle with the successful development of a greenfield app for
+              the financial consulting business, BUSINESSNAV.
+            </p>
+            <p>
+              Beyond technical skills, my extra value comes from my Business
+              Management degree and the lessons I have learnt from working in
+              previous teams. My business degree and previous experience have
+              enhanced my project management, client communication, team
+              collaboration and innovation skills while also giving me a greater
+              understanding of general business operations.
+            </p>
+          </Item>
 
-            <Box sx={{ pt: 5 }}>
-              <h1>My Education</h1>
-              <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
-                  <EducationCard />
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <EducationCard />
-                </Grid>
+          <Box sx={{ pt: 5 }}>
+            <h1>My Experience</h1>
+            <TimelineComponent />
+          </Box>
+
+          <Box sx={{ pt: 5 }}>
+            <h1>My Education</h1>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={6}>
+                <EducationCard />
               </Grid>
-            </Box>
+              <Grid item xs={12} md={6}>
+                <EducationCard />
+              </Grid>
+            </Grid>
+          </Box>
 
-            <Box
-              sx={{
-                pt: 10,
-                pb: 3,
-                width: { xs: "100%", md: "60%" },
-                margin: "auto",
-              }}
-            >
-              <CreatedByFooter />
-            </Box>
-          </Container>
-        </div>
+          <Box
+            sx={{
+              pt: 10,
+              pb: 3,
+              width: { xs: "100%", md: "60%" },
+              margin: "auto",
+            }}
+          >
+            <CreatedByFooter />
+          </Box>
+        </Container>
       </div>
     </div>
   );
