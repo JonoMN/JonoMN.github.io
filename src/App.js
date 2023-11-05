@@ -13,6 +13,9 @@ import { Typography } from "@mui/material";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
+    background: {
+      default: "#000626",
+    },
   },
 });
 
