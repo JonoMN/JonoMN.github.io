@@ -11,6 +11,9 @@ import { loadSlim } from "tsparticles-slim";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import TimelineComponent from "../components/Timeline";
+import { EducationCard } from "../components/EducationCard";
+import { CreatedByFooter } from "../components/CreatedByFooter";
+
 import "../App.css";
 
 import Box from "@mui/material/Box";
@@ -150,7 +153,7 @@ function Home() {
         <div className="gradient_background">
           <Container
             style={{ color: "white", textAlign: "justify" }}
-            sx={{ width: "50%", margin: "auto" }}
+            sx={{ width: { xs: "80%", lg: "60%" }, margin: "auto" }}
           >
             <h1>About Me</h1>
             <Item>
@@ -187,98 +190,25 @@ function Home() {
 
             <Box sx={{ pt: 5 }}>
               <h1>My Education</h1>
-              <Item>
-                <Grid container spacing={2}>
-                  <Grid item xs={6}>
-                    <Card
-                      sx={{
-                        display: "flex",
-                        background: "rgba(255, 255, 255, .10)",
-                      }}
-                    >
-                      <CardMedia
-                        component="img"
-                        sx={{ width: 100 }}
-                        image={QUT}
-                        alt="QUT Logo"
-                      />
-                      <Box sx={{ display: "flex", flexDirection: "column" }}>
-                        <CardContent>
-                          <Typography variant="h5">Bachelor IT</Typography>
-                          <Typography
-                            variant="subtitle1"
-                            color="text.secondary"
-                            component="div"
-                          >
-                            Major Computer Science
-                          </Typography>
-                        </CardContent>
-                      </Box>
-                    </Card>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Card
-                      sx={{
-                        display: "flex",
-                        background: "rgba(255, 255, 255, .10)",
-                      }}
-                    >
-                      <CardMedia
-                        component="img"
-                        sx={{ width: 100 }}
-                        image={QUT}
-                        alt="QUT Logo"
-                      />
-                      <Box sx={{ display: "flex", flexDirection: "column" }}>
-                        <CardContent>
-                          <Typography variant="h5">
-                            Bachelor Business
-                          </Typography>
-                          <Typography
-                            variant="subtitle1"
-                            color="text.secondary"
-                            component="div"
-                          >
-                            Major Management
-                          </Typography>
-                        </CardContent>
-                      </Box>
-                    </Card>
-                  </Grid>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={6}>
+                  <EducationCard />
                 </Grid>
-              </Item>
+                <Grid item xs={12} md={6}>
+                  <EducationCard />
+                </Grid>
+              </Grid>
             </Box>
+
             <Box
               sx={{
                 pt: 10,
                 pb: 3,
-                width: "60%",
+                width: { xs: "100%", md: "60%" },
                 margin: "auto",
               }}
             >
-              <Typography align="center" color="text.secondary">
-                Loosely designed in{" "}
-                <Typography color="text.primary" component="span">
-                  Figma
-                </Typography>{" "}
-                and coded in{" "}
-                <Typography color="text.primary" component="span">
-                  VS Code
-                </Typography>{" "}
-                by yours truly. Built with{" "}
-                <Typography color="text.primary" component="span">
-                  React
-                </Typography>{" "}
-                and{" "}
-                <Typography color="text.primary" component="span">
-                  MUI Core
-                </Typography>
-                , deployed with{" "}
-                <Typography color="text.primary" component="span">
-                  GitHub Pages
-                </Typography>
-                .
-              </Typography>
+              <CreatedByFooter />
             </Box>
           </Container>
         </div>
