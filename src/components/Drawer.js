@@ -5,6 +5,8 @@ import {
   List,
   ListItemButton,
   ListItemText,
+  ListItem,
+  Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -31,21 +33,39 @@ function DrawerComponent() {
             pb: "150%",
           }}
         >
-          <ListItemButton onClick={toggleDrawer} sx={{ width: "200px" }}>
-            <ListItemText>
-              <Link to="/">/ Home</Link>
-            </ListItemText>
-          </ListItemButton>
-          <ListItemButton onClick={toggleDrawer}>
-            <ListItemText>
-              <Link to="/projects">/ Projects</Link>
-            </ListItemText>
-          </ListItemButton>
-          <ListItemButton onClick={toggleDrawer}>
-            <ListItemText>
-              <Link to="/blog">/ Blog</Link>
-            </ListItemText>
-          </ListItemButton>
+          <ListItem>
+            <Button
+              sx={{ width: "200px" }}
+              color="inherit"
+              component={Link}
+              to="/"
+              onClick={toggleDrawer}
+            >
+              / Home
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button
+              sx={{ width: "200px" }}
+              color="inherit"
+              component={Link}
+              to="/projects"
+              onClick={toggleDrawer}
+            >
+              / Projects
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button
+              sx={{ width: "200px" }}
+              color="inherit"
+              component={Link}
+              to="/blog"
+              onClick={toggleDrawer}
+            >
+              / Blog
+            </Button>
+          </ListItem>
         </List>
       </Drawer>
       <IconButton onClick={toggleDrawer}>
