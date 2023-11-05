@@ -30,7 +30,7 @@ function Projects() {
   let componentsArr = [];
   for (let i = 0; i < projects.length; i++) {
     componentsArr.push(
-      <Grid xs={6} sx={{ p: 2 }}>
+      <Grid xs={12} md={6} xl={4} sx={{ p: 2 }}>
         <Project
           title={projects[i].Name}
           topics={projects[i].Topics}
