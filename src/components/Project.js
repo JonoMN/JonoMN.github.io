@@ -48,9 +48,6 @@ function Project({ title, topics, desc, link, image }) {
             <Typography variant="subtitle1" color="text.secondary">
               {topics}
             </Typography>
-            <Typography variant="body1" color="text.secondary">
-              {desc}
-            </Typography>
           </Box>
         ) : (
           <CardMedia image={temp1} title="green iguana" />

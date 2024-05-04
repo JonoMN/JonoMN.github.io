@@ -154,7 +154,7 @@ function Home() {
             sx={{ typography: { xs: "h6", sm: "h5", md: "h4", lg: "h3" } }}
             color="#FF3A20"
           >
-            //Aspiring Fullstack Developer
+            //Fullstack Developer
           </Typography>
         </Container>
 

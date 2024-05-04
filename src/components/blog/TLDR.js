@@ -2,7 +2,7 @@ import Card from "@mui/material/Typography";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Typography";
 
-function TLDR() {
+function TLDR(props) {
   return (
     <Container
       sx={{
@@ -26,10 +26,8 @@ function TLDR() {
           component="div"
           sx={{ width: "95%", margin: "auto" }}
         >
-          <b>TL;DR: </b>CORS is a web security feature that defines how sites
-          with different domains are allowed to communicate. It allows servers
-          to specify what sites are allowed to access their resources via HTTP
-          headers.
+          <b>TL;DR: </b>
+          {props.content}
         </Typography>
       </Card>
     </Container>
