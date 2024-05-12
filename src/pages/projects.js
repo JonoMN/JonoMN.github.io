@@ -4,9 +4,7 @@ import Project from "../components/Project";
 
 import React from "react";
 
-// MUI Grid
 import Grid from "@mui/material/Grid";
-import Item from "@mui/material/Grid";
 import { Typography } from "@mui/material";
 
 function Projects() {
@@ -15,14 +13,21 @@ function Projects() {
       Name: "Peak Performance App (QUT CAPSTONE Project)",
       Topics: "React Native • AWS • Node",
       Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
-      Link: "",
+      Link: "/projects/peak-performance",
       Image: require("../img/BNAV MockUp.png"),
     },
     {
-      Name: "Finance Tracker (Up API)",
-      Topics: "React •  • Node",
+      Name: "Live Finance Tracker",
+      Topics: "React • Typescript • Figma • Axios",
       Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
-      Link: "",
+      Link: "/projects/finance-tracker",
+      Image: require("../img/FinanceTracker.png"),
+    },
+    {
+      Name: "Happy Hour Finder",
+      Topics: "React (Next) • Node.js (Express) • AWS Lighsail • Postgres • Swagger",
+      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
+      Link: "/projects/finance-tracker",
       Image: require("../img/FinanceTracker.png"),
     },
   ];
@@ -43,19 +48,10 @@ function Projects() {
   }
 
   return (
-    <div
-      style={{
-        backgroundColor: "#000626",
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-      }}
-    >
-      <Container style={{ color: "white", paddingTop: "10vh" }}>
-        <Typography variant="h4">/ PROJECTS</Typography>
+      <Container>
+        <Typography variant="h3">/ projects</Typography>
         <Grid container>{componentsArr}</Grid>
       </Container>
-    </div>
   );
 }
 

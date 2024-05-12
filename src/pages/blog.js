@@ -3,49 +3,38 @@ import "../App.css";
 import Blog from "../components/Blog";
 
 import React from "react";
-import Box from "@mui/material/Box";
-
-// MUI Grid
-import Grid from "@mui/material/Grid";
-import Item from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
 import { Typography } from "@mui/material";
 
 function Blogs() {
-  // let blogs = [
-  //   ["Who the hell is CORs, and why is he breaking my website?", "23/07/2023"],
-  //   ["Sorting algorithms, which one would win in a race?", "24/08/2023"],
-  //   ["What's a backend framework and where can I find one?", "04/09/2023"],
-  // ];
 
   let blogs = [
     {
+      Name: "What fish can I catch with a React Hook?",
+      Date: "02/04/2024",
+      Topics: "React Hooks • Custom Hooks • React State",
+      Desc: "TL;DR: React Hooks provide a flexible and concise solution to handle state and side effects in functional components. There are several built in React Hooks or you can build your own custom hooks to encapsulate and reuse stateful logic across different components.",
+      Link: "/blog/react-hooks",
+    },
+    {
       Name: "Who the hell is CORs, and why is he breaking my website?",
-      Date: "23/07/2023",
+      Date: "10/03/2024",
       Topics: "CORs • Same-Origin Policy • CSRF",
-      Desc: "What is CORS and why am I writing about it? Because it has been a thorn in my side for too long and I need a better understanding of how it works. The way I have learnt to understand CORS is that it is a stage in a complex resolution to a simple problem. The stages include the issue (CSRF), the resolution (SOP) and the relaxation of the resolution (CORS).",
+      Desc: "TL;DR: CORS is a web security feature that defines how sites with different domains are allowed to communicate. It allows servers to specify what sites are allowed to access their resources via HTTP headers.",
       Link: "/blog/Cors",
     },
     {
-      Name: "Sorting algorithms, which one would win in a race?",
-      Date: "24/08/2023",
-      Topics: "Sorting Algorithms • Big-O Notation",
-      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam. Fusce consectetur, enim at blandit volutpat, nisl turpis bibendum eros, eget congue nunc turpis quis erat. Quisque tincidunt, sapien a ultricies egestas, sapien arcu sollicitudin purus, ut efficitur enim leo nec metus. Suspendisse sed rhoncus urna. Vestibulum ut malesuada turpis, non aliquam nisl. Nullam sodales lobortis libero, non congue risus semper quis.",
-      Link: "",
+      Name: "HTTP Cache Control Extensions for Stale Content",
+      Date: "04/11/2023",
+      Topics: "HTTP Cache-Control Extensions • Stale-while-revalidate • Stale-if-error",
+      Desc: "TL;DR: The stale-if-error (SIE) HTTP Cache-Control extension allows a cache to return stale cache in favour of returning a hard error, improving availability. The stale-while-revalidate (SWR) HTTP Cache-Control extension allows a cache to immediately return a stale response while it revalidates it in the background, thereby hiding latency.",
+      Link: "/blog/http-cache-controls",
     },
     {
-      Name: "What's a backend framework and where are they hiding?",
-      Date: "04/09/2023",
-      Topics: "Backend Frameworks",
-      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam. Fusce consectetur, enim at blandit volutpat, nisl turpis bibendum eros, eget congue nunc turpis quis erat. Quisque tincidunt, sapien a ultricies egestas, sapien arcu sollicitudin purus, ut efficitur enim leo nec metus. Suspendisse sed rhoncus urna. Vestibulum ut malesuada turpis, non aliquam nisl. Nullam sodales lobortis libero, non congue risus semper quis.",
-      Link: "",
-    },
-    {
-      Name: "What's a backend framework and where are they hiding?",
-      Date: "04/09/2023",
-      Topics: "Backend Frameworks",
-      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam. Fusce consectetur, enim at blandit volutpat, nisl turpis bibendum eros, eget congue nunc turpis quis erat. Quisque tincidunt, sapien a ultricies egestas, sapien arcu sollicitudin purus, ut efficitur enim leo nec metus. Suspendisse sed rhoncus urna. Vestibulum ut malesuada turpis, non aliquam nisl. Nullam sodales lobortis libero, non congue risus semper quis.",
-      Link: "",
+      Name: "Javascript Hoisting",
+      Date: "25/11/2023",
+      Topics: "Declarations and Initialisations • Function Scope • Hoisting",
+      Desc: "TL:DR; In JavaScript, variable declarations (but not initialisations) are moved to the top of their relevant scope at run time. If the variable is used after it has been declared but before it has been initialised, it will be ‘undefined’.",
+      Link: "/blog/javascript-hoisting",
     },
   ];
 
@@ -64,22 +53,19 @@ function Blogs() {
   }
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-        backgroundColor: "#000626",
-      }}
-    >
-      <Container
-        className="aboutMe"
-        style={{ color: "white", textAlign: "justify", paddingTop: "8vh" }}
-      >
-        <h1>/blog</h1>
+      <Container>
+        <Typography variant="h3">/ blog</Typography>
+        <Typography 
+          variant="body1"
+          sx = {{pt:3, pb:3}}
+          color="text.secondary">
+            I'll be honest - writing these blog posts is a bit of a selfish endeavor. They're my way of diving deep into topics 
+            that I don't understand at all or just want to understand to higher degree. So, while I try my best, there might be a few 
+            slip-ups along the way. If you spot any mistakes, give me a shout! That’s how we all learn, right? Let's sail these 
+            waters together and have some fun while we're at it!
+          </Typography>
         <div>{componentsArr}</div>
       </Container>
-    </div>
   );
 }
 

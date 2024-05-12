@@ -1,11 +1,5 @@
-import temp1 from "../img/BNAV MockUp.png";
 import { CardActionArea } from "@mui/material";
 import { Link } from "react-router-dom";
-
-// MUI Card
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -31,9 +25,9 @@ function Blog({ title, date, topics, desc, link }) {
           </Typography>
 
           <Typography
-            variant="subtitle1"
-            color="text.secondary"
+            variant="h6"
             component="div"
+            color="#FF3A20"
           >
             {topics}
           </Typography>

@@ -1,6 +1,8 @@
 import temp1 from "../img/BNAV MockUp.png";
 import { CardActionArea } from "@mui/material";
 import "../App.css";
+import { Link } from "react-router-dom";
+
 
 // MUI Card
 import Card from "@mui/material/Card";
@@ -27,7 +29,7 @@ function Project({ title, topics, desc, link, image }) {
   }
   return (
     <Card sx={{ display: "flex" }}>
-      <CardActionArea onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+      <CardActionArea onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} component={Link} to={link}>
         <CardMedia component="img" image={image} />
 
         {isHovered ? (
