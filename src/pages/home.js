@@ -160,7 +160,7 @@ function Home() {
 
         <Container
           style={{ color: "white", textAlign: "justify" }}
-          sx={{ width: { xs: "80%", lg: "60%" }, margin: "auto" }}
+          sx={{ width: { xs: "80%", lg: "60%" }}}
         >
           <h1>About Me</h1>
           <Item>
@@ -192,7 +192,6 @@ function Home() {
           </Item>
 
           <Box sx={{ pt: 5 }}>
-            <h1>My Experience</h1>
             <TimelineComponent />
           </Box>
 
@@ -200,10 +199,10 @@ function Home() {
             <h1>My Education</h1>
             <Grid container spacing={2}>
               <Grid item xs={12} md={6}>
-                <EducationCard />
+                <EducationCard degree="Information Technology" major="Major Computer Science"/>
               </Grid>
               <Grid item xs={12} md={6}>
-                <EducationCard />
+                <EducationCard degree="Bachelor Business" major="Major Management" />
               </Grid>
             </Grid>
           </Box>
