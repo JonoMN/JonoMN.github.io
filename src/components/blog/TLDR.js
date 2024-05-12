@@ -14,10 +14,8 @@ function TLDR(props) {
         sx={{
           display: "flex",
           background: "rgba(255, 255, 255, .10)",
-          pt: 2,
-          pb: 2,
-          width: "75%",
-          margin: "auto",
+          pt: 3,
+          pb: 3,
           borderRadius: 2,
         }}
       >
@@ -27,7 +25,7 @@ function TLDR(props) {
           sx={{ width: "95%", margin: "auto" }}
         >
           <b>TL;DR: </b>
-          {props.content}
+          {props.children}
         </Typography>
       </Card>
     </Container>

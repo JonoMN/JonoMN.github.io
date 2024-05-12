@@ -7,9 +7,9 @@ function BlogHeading(props) {
     <Typography
       component="div"
       variant="h4"
-      sx={{ width: "75%", margin: "auto" }}
+      sx={{ pb: 2}}
     >
-      {props.content}
+      {props.children}
     </Typography>
   );
 }

@@ -1,15 +1,13 @@
-import Card from "@mui/material/Typography";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Typography";
 
 function BlogHeading(props) {
   return (
     <Typography
+      component="div" 
       variant="h5"
-      component="div"
-      sx={{ pt: 3, width: "75%", margin: "auto" }}
+      sx={{ pt: 3, pb: 1}}
     >
-      {props.content}
+      {props.children}
     </Typography>
   );
 }

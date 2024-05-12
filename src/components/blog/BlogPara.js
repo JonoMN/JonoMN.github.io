@@ -1,15 +1,13 @@
-import Card from "@mui/material/Typography";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Typography";
 
 function BlogPara(props) {
   return (
     <Typography
-      variant="body"
       component="div"
-      sx={{ pt: 2, width: "75%", margin: "auto" }}
+      variant="body"
+      sx={{pb: 2}}
     >
-      {props.content}
+      {props.children}
     </Typography>
   );
 }
