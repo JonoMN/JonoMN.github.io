@@ -10,8 +10,8 @@ import { Typography } from "@mui/material";
 function Projects() {
   let projects = [
     {
-      Name: "Peak Performance App (QUT CAPSTONE Project)",
-      Topics: "React Native • AWS • Node",
+      Name: "Peak Performance App (QUT Capstone)",
+      Topics: "React Native • Node.js • Agile Methodologies • Testing Practices • System Architecture Design",
       Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
       Link: "/projects/peak-performance",
       Image: require("../img/BNAV MockUp.png"),
