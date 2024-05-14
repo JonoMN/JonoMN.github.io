@@ -27,8 +27,8 @@ function Projects() {
       Name: "Happy Hour Finder",
       Topics: "React (Next) • Node.js (Express) • AWS Lighsail • Postgres • Swagger",
       Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
-      Link: "/projects/finance-tracker",
-      Image: require("../img/FinanceTracker.png"),
+      Link: "",
+      Image: require("../img/Construction.png"),
     },
   ];
 

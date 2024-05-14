@@ -1,19 +1,14 @@
-.App-body {
-  background-image: "";
-}
-
-
-.typed-cursor{
+.typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
 }
 
-@keyframes blink{
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .navbar {
@@ -21,7 +16,17 @@
   backdrop-filter: blur(5px);
 }
 
-.drawer .MuiDrawer-paper{
+.drawer .MuiDrawer-paper {
   background-color: rgba(255, 255, 255, .15);  
   backdrop-filter: blur(5px);
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* For modern browsers */
+body {
+  overflow-x: hidden;
 }
