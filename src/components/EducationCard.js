@@ -5,7 +5,7 @@ import QUTLogo from '../img/QUT-Logo.png';
 export function EducationCard(props) {
   return (
     <Card sx={{ display: 'flex', background: 'rgba(255, 255, 255, 0.10)' }}>
-      <Box sx={{ width: { xs: 80, md: 100 }, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Box sx={{ width: { xs: 85, md: 100 }, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <CardMedia
           component="img"
           sx={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}

@@ -1,27 +1,18 @@
-import { Container } from "@mui/system";
+import { Container, Grid, Typography, Box, Card, CardContent, CardMedia, Button, Collapse } from "@mui/material";
 import "../App.css";
 
-import React from "react";
-import Grid from "@mui/material/Grid";
-import Item from "@mui/material/Grid";
+import React, { useState, useEffect, useCallback } from "react";
 import QUT from "../img/QUT-Logo.png";
-import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
 import { loadSlim } from "tsparticles-slim";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import Particles from "react-particles";
 import TimelineComponent from "../components/Timeline";
 import { EducationCard } from "../components/EducationCard";
 import { CreatedByFooter } from "../components/CreatedByFooter";
 
-import "../App.css";
-
-import Box from "@mui/material/Box";
-
-import Particles from "react-particles";
-import { useCallback } from "react";
-
 function Home() {
+
+  const [readMore, setReadMore] = useState(false);
+
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     await loadSlim(engine);
@@ -31,11 +22,12 @@ function Home() {
     await console.log(container);
   }, []);
 
-  const [opacity, setOpacity] = React.useState(1);
-  React.useEffect(() => {
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
     const range = 500;
     const offset = 700;
-    const didScrollPage = (e) => {
+    const handleScroll = () => {
       let calc = 1 - (window.scrollY - offset + range) / range;
       if (calc > 1) {
         calc = 1;
@@ -44,9 +36,9 @@ function Home() {
       }
       setOpacity(calc);
     };
-    window.addEventListener("scroll", didScrollPage);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("keydown", didScrollPage);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -141,16 +133,18 @@ function Home() {
         }}
       >
         <Container
-          style={{
+          sx={{
             height: "800px",
           }}
         >
           <Typography
+            variant="h1"
             sx={{ typography: { xs: "h4", sm: "h3", md: "h2", lg: "h1" } }}
           >
             JONATHAN NELSON
           </Typography>
           <Typography
+            variant="h3"
             sx={{ typography: { xs: "h6", sm: "h5", md: "h4", lg: "h3" } }}
             color="#FF3A20"
           >
@@ -159,47 +153,56 @@ function Home() {
         </Container>
 
         <Container
-          style={{ color: "white", textAlign: "justify" }}
-          sx={{ width: { xs: "80%", lg: "60%" }}}
+          sx={{ color: "white", width: { xs: "80%", lg: "60%" } }}
         >
-          <h1>About Me</h1>
-          <Item>
-            <p>
-              From the moment I powered on my first computer, I felt a spark.
-              Software development is not just a profession to me; it's a
-              calling. I'm inspired by the boundless potential it holds - the
-              idea that a line of code today can reshape the world tomorrow. I
-              don't just aim to create software; I strive to foster innovation
-              and catalyze global productivity.
-            </p>
-            <p>
-              Armed with a degree in Computer Science, I have honed my skills to
-              tackle the most challenging technical puzzles. During my computer
-              science degree, I specialised in Full Stack development coming to
-              a pinnacle with the successful development of a greenfield app for
-              the financial consulting business, BUSINESSNAV.
-            </p>
-            <p>
-              But my journey didn't stop there. My quest for growth led me to a
-              Business Management degree, and it's here that I found the perfect
-              marriage of tech and strategy. Drawing from this dual expertise,
-              I've cultivated not just technical proficiency, but a broader
-              vision that blends project management, client communication, and
-              team synergy. It's this holistic perspective that lets me see
-              beyond the code, understanding how technology intertwines with the
-              pulse of business.
-            </p>
-          </Item>
+          <Typography variant="h3" sx={{ mb: 2 }}>About Me</Typography>
+          <Box>
+      <Typography variant="body1" sx={{ mb: 2 }}>
+        From the moment I powered on my first computer, I felt a spark.
+        Software development is not just a profession to me; it's a
+        calling. I'm inspired by the boundless potential it holds - the
+        idea that a line of code today can reshape the world tomorrow. I
+        don't just aim to create software; I strive to foster innovation
+        and catalyze global productivity.
+      </Typography>
+      <Collapse in={readMore}>
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          Armed with a degree in Computer Science, I have honed my skills to
+          tackle the most challenging technical puzzles. During my computer
+          science degree, I specialized in Full Stack development coming to
+          a pinnacle with the successful development of a greenfield app for
+          the financial consulting business, BUSINESSNAV.
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          But my journey didn't stop there. My quest for growth led me to a
+          Business Management degree, and it's here that I found the perfect
+          marriage of tech and strategy. Drawing from this dual expertise,
+          I've cultivated not just technical proficiency, but a broader
+          vision that blends project management, client communication, and
+          team synergy. It's this holistic perspective that lets me see
+          beyond the code, understanding how technology intertwines with the
+          pulse of business.
+        </Typography>
+      </Collapse>
+      <Button
+        variant="outlined"
+        size="small"
+        onClick={() => setReadMore(!readMore)}
+        sx={{ color: "white", borderColor: "white" }}
+      >
+        {readMore ? 'Read Less' : 'Read More'}
+      </Button>
+    </Box>
 
           <Box sx={{ pt: 5 }}>
             <TimelineComponent />
           </Box>
 
           <Box sx={{ pt: 5 }}>
-            <h1>My Education</h1>
+            <Typography variant="h3" sx={{ mb: 2 }}>My Education</Typography>
             <Grid container spacing={2}>
               <Grid item xs={12} md={6}>
-                <EducationCard degree="Information Technology" major="Major Computer Science"/>
+                <EducationCard degree="Bachelor IT" major="Major Computer Science" />
               </Grid>
               <Grid item xs={12} md={6}>
                 <EducationCard degree="Bachelor Business" major="Major Management" />

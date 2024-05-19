@@ -60,7 +60,7 @@ function Blogs() {
           sx = {{pt:3, pb:3}}
           color="text.secondary">
             I'll be honest - writing these blog posts is a bit of a selfish endeavor. They're my way of diving deep into topics 
-            that I don't understand at all or just want to understand to higher degree. So, while I try my best, there might be a few 
+            that I don't understand or just want to understand to higher degree. So, while I try my best, there might be a few 
             slip-ups along the way. If you spot any mistakes, give me a shout! That’s how we all learn, right? Let's sail these 
             waters together and have some fun while we're at it!
           </Typography>
