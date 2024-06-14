@@ -19,17 +19,17 @@ function NavBar() {
         ) : (
           <Container sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <div>
+              <Button color="inherit" component={Link} to="/">/ Home</Button>
+              <Button color="inherit" component={Link} to="/projects">/ Projects</Button>
+              <Button color="inherit" component={Link} to="/blog">/ Blog</Button>
+            </div>
+            <div>
               <IconButton aria-label="LinkedIn" color="inherit" href="https://www.linkedin.com/in/jonathan-m-nelson/">
                 <LinkedInIcon />
               </IconButton>
               <IconButton aria-label="GitHub" color="inherit" href="https://github.com/JonoMN/">
                 <GitHubIcon />
               </IconButton>
-            </div>
-            <div>
-              <Button color="inherit" component={Link} to="/">/ Home</Button>
-              <Button color="inherit" component={Link} to="/projects">/ Projects</Button>
-              <Button color="inherit" component={Link} to="/blog">/ Blog</Button>
             </div>
           </Container>
         )}
