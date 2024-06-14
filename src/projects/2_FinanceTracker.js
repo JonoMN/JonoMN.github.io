@@ -8,9 +8,9 @@ import BlogPara from "../components/blog/BlogPara";
 import "../App.css";
 
 const slideData = [
-  { index: 0, src: '/FinanceTracker/Accounts.png' },
-  { index: 1, src: '/FinanceTracker/Dashboard.png' },
-  { index: 2, src: '/FinanceTracker/Transactions.png' },
+  { index: 0, src: '/financeTracker/accounts.png' },
+  { index: 1, src: '/financeTracker/dashboard.png' },
+  { index: 2, src: '/financeTracker/transactions.png' },
 ];
 
 const Slide = styled('li')(({ current, index }) => ({
