@@ -58,7 +58,7 @@ function TimelineComponent() {
                   </IconButton>
                   {itemIndex < experience.items.length - 1 && <TimelineConnector />}
                 </TimelineSeparator>
-                <TimelineContent>
+                <TimelineContent sx={{ cursor: 'pointer'}}>
                   <Typography variant="h6" color="#FF3A20">
                     {item.role}
                   </Typography>

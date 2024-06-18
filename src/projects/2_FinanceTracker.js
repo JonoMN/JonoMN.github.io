@@ -1,8 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Box, Button, Grid, IconButton, styled, Typography } from "@mui/material";
 import { GitHub as GitHubIcon, DesignServices as DesignServicesIcon, ArrowBackIos as ArrowBackIosIcon, ArrowForwardIos as ArrowForwardIosIcon } from '@mui/icons-material';
 import TLDR from "../components/blog/TLDR";
-import BlogHeading from "../components/blog/BlogHeading";
 import BlogTitle from "../components/blog/BlogTitle";
 import BlogPara from "../components/blog/BlogPara";
 import "../App.css";
