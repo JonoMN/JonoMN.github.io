@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3b1acd6c.css",
-    "main.js": "/static/js/main.aee8a971.js",
+    "main.js": "/static/js/main.3dd0cfbc.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/BNAV MockUp.png": "/static/media/BNAV MockUp.736a6c3cc017bb9c0154.png",
     "static/media/FinanceTracker.png": "/static/media/FinanceTracker.9d39c0b98f92160f3ee5.png",
@@ -9,11 +9,11 @@
     "static/media/QUT-Logo.png": "/static/media/QUT-Logo.fba080d38f8921761729.png",
     "index.html": "/index.html",
     "main.3b1acd6c.css.map": "/static/css/main.3b1acd6c.css.map",
-    "main.aee8a971.js.map": "/static/js/main.aee8a971.js.map",
+    "main.3dd0cfbc.js.map": "/static/js/main.3dd0cfbc.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b1acd6c.css",
-    "static/js/main.aee8a971.js"
+    "static/js/main.3dd0cfbc.js"
   ]
 }
