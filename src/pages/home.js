@@ -138,13 +138,11 @@ function Home() {
           }}
         >
           <Typography
-            variant="h1"
             sx={{ typography: { xs: "h4", sm: "h3", md: "h2", lg: "h1" } }}
           >
             JONATHAN NELSON
           </Typography>
           <Typography
-            variant="h3"
             sx={{ typography: { xs: "h6", sm: "h5", md: "h4", lg: "h3" } }}
             color="#FF3A20"
           >

@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/home";
 import Blog from "./pages/blog";
 
-
 import Blog1_CORs from "./blogs/1_Cors";
 import Blog2_ReactHooks from "./blogs/2_ReactHooks";
 import Blog3_HTTPCacheControl from "./blogs/3_HTTPCacheControl";
@@ -17,13 +16,33 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Typography } from "@mui/material";
 
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
     background: {
       default: "#000626",
+    },
+  },
+  typography: {
+    fontFamily: 'Roboto, Arial, sans-serif',
+    h1: {
+      fontWeight: 500, // medium
+    },
+    h2: {
+      fontWeight: 500, // medium
+    },
+    h3: {
+      fontWeight: 500, // medium
+    },
+    h4: {
+      fontWeight: 500, // medium
+    },
+    h5: {
+      fontWeight: 500, // medium
+    },
+    h6: {
+      fontWeight: 500, // medium
     },
   },
 });
