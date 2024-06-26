@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Grid, Typography  } from "@mui/material";
-import { GitHub as GitHubIcon, DesignServices as DesignServicesIcon} from '@mui/icons-material';
+import { GitHub as GitHubIcon, DesignServices as DesignServicesIcon, DataObject as DataObjectIcon} from '@mui/icons-material';
 import TLDR from "../components/blog/TLDR";
 import BlogTitle from "../components/blog/BlogTitle";
 import BlogPara from "../components/blog/BlogPara";
@@ -52,6 +52,16 @@ function Project() {
           >
             Figma
           </Button>
+          <Button
+            variant="contained"
+            sx={{ background: "white", ':hover': { backgroundColor: '#FF3A20', color: "white" } }}
+            startIcon={<DataObjectIcon />}
+            href=""
+            target="_blank"
+            disabled
+          >
+            Swagger
+        </Button>
         </Box>
         <TLDR>
           A personal finance tracking website using React and TypeScript, featuring live data integration from the UP bank API via Axios. This project highlights my skills in creating secure, user-centric digital solutions.

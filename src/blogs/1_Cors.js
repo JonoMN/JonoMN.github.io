@@ -36,7 +36,7 @@ function Blogs() {
         mb: "100px"
       }}
       >
-          <BlogDate>23/07/2023</BlogDate>
+          <BlogDate>10/03/2024</BlogDate>
           <BlogTitle>Who the hell is CORs, and why is he breaking my website?</BlogTitle>
           <TLDR>
             CORS is a web security feature that defines how sites

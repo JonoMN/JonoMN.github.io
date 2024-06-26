@@ -11,8 +11,7 @@ import TLDR from "../components/blog/TLDR";
 import BlogHeading from "../components/blog/BlogHeading";
 import BlogTitle from "../components/blog/BlogTitle";
 import BlogPara from "../components/blog/BlogPara";
-import { GitHub as GitHubIcon, DesignServices as DesignServicesIcon, ArrowBackIos as ArrowBackIosIcon, ArrowForwardIos as ArrowForwardIosIcon } from '@mui/icons-material';
-
+import { GitHub as GitHubIcon, DesignServices as DesignServicesIcon, DataObject as DataObjectIcon} from '@mui/icons-material';
 
 function Project() {
   return (
@@ -38,11 +37,31 @@ function Project() {
           variant="contained"
           sx={{ background: "white", ':hover': { backgroundColor: '#FF3A20', color: "white" } }}
           startIcon={<GitHubIcon />}
-          href="https://github.com/JonoMN/Finance-Tracker"
+          href=""
           target="_blank"
           disabled
         >
           Github
+        </Button>
+        <Button
+          variant="contained"
+          sx={{ background: "white", ':hover': { backgroundColor: '#FF3A20', color: "white" } }}
+          startIcon={<DesignServicesIcon />}
+          href=""
+          target="_blank"
+          disabled
+        >
+          Figma
+        </Button>
+        <Button
+          variant="contained"
+          sx={{ background: "white", ':hover': { backgroundColor: '#FF3A20', color: "white" } }}
+          startIcon={<DataObjectIcon />}
+          href=""
+          target="_blank"
+          disabled
+        >
+          Swagger
         </Button>
       </Box>
         
