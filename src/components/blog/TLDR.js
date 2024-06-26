@@ -14,17 +14,16 @@ function TLDR(props) {
         sx={{
           display: "flex",
           background: "rgba(255, 255, 255, .10)",
-          pt: 3,
-          pb: 3,
+          p: 3,
           borderRadius: 2,
         }}
       >
         <Typography
           variant="body"
           component="div"
-          sx={{ width: "95%", margin: "auto" }}
+          sx={{ width: "100%", margin: "auto" }}
         >
-          <b>TL;DR: </b>
+          <b>TL;DR</b><br></br>
           {props.children}
         </Typography>
       </Card>

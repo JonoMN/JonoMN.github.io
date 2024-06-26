@@ -89,7 +89,7 @@ function Blogs() {
             React Hooks are an incredibly handy feature in React that allow you to "hook into" React's state and lifecycle features from within function components. Basically, if you see a function in React that starts with "use", like useState or useEffect, you're looking at a hook.
           </BlogPara>
           <BlogPara>
-            React Hooks are an incredibly handy feature in React that allow you to "hook into" React's state and lifecycle features from within function components. Basically, if you see a function in React that starts with "use", like useState or useEffect, you're looking at a hook.
+            There are three basic rules that need to be followed with React Hooks:
           </BlogPara>
 
           <ol>
