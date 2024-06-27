@@ -194,7 +194,7 @@ function Home() {
             sx={{
               typography: { xs: "h6", sm: "h5", md: "h4", lg: "h3" },
             }}>
-            //Fullstack Developer
+            // Fullstack Developer
           </Typography>
         </Container>
 
@@ -234,7 +234,7 @@ function Home() {
             <Typography variant="body1" sx={{ mb: 2 }}>
               From the moment I powered on my first computer, I felt a spark.
               Software development is not just a profession to me; it's a
-              calling. I'm inspired by the boundless potential it holds - the
+              calling. I'm inspired by the boundless potential it holds, the
               idea that a line of code today can reshape the world tomorrow. I
               don't just aim to create software; I strive to foster innovation
               and catalyze global productivity.
