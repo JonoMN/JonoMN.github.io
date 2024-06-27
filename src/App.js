@@ -17,6 +17,9 @@ import { Route, Routes } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -26,6 +29,9 @@ const darkTheme = createTheme({
   },
   typography: {
     fontFamily: 'Roboto, Arial, sans-serif',
+    allVariants: {
+      color: '#ffffff', // set all typography to white
+    },
     h1: {
       fontWeight: 500, // medium
     },
@@ -47,6 +53,16 @@ const darkTheme = createTheme({
   },
 });
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
@@ -55,6 +71,7 @@ function App() {
           <NavBar></NavBar>
         </header>
         <div style={{ paddingTop: '90px' }}>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
