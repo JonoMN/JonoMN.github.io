@@ -1,4 +1,3 @@
-import temp1 from "../img/BNAV MockUp.png";
 import { CardActionArea } from "@mui/material";
 import "../App.css";
 import { Link } from "react-router-dom";
@@ -7,17 +6,12 @@ import { Link } from "react-router-dom";
 // MUI Card
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Unstable_Grid2";
 
 import { useState } from "react";
-import CardHeader from "@mui/material/CardHeader";
-import CardActions from "@mui/material/CardActions";
-import IconButton from "@mui/material/IconButton";
 
-function Project({ title, topics, desc, link, image }) {
+function Project({ title, topics, link, image, height }) {
   const [isHovered, setIsHovered] = useState(false);
 
   function handleMouseOver() {
@@ -28,7 +22,7 @@ function Project({ title, topics, desc, link, image }) {
     setIsHovered(false);
   }
   return (
-    <Card sx={{ display: "flex" }}>
+    <Card sx={{ display: "flex", height:height}}>
       <CardActionArea onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} component={Link} to={link}>
         <CardMedia component="img" image={image} />
 
@@ -52,7 +46,7 @@ function Project({ title, topics, desc, link, image }) {
             </Typography>
           </Box>
         ) : (
-          <CardMedia image={temp1} title="green iguana" />
+          <CardMedia />
         )}
       </CardActionArea>
     </Card>

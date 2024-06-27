@@ -12,21 +12,18 @@ function Projects() {
     {
       Name: "Peak Performance App (QUT Capstone)",
       Topics: "React Native • Node.js • Agile Methodologies • Testing Practices • System Architecture Design",
-      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
       Link: "/projects/peak-performance",
       Image: require("../img/BNAV MockUp.png"),
     },
     {
       Name: "Live Finance Tracker",
       Topics: "React • Typescript • Figma • Axios",
-      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
       Link: "/projects/finance-tracker",
       Image: require("../img/FinanceTracker.png"),
     },
     {
       Name: "Happy Hour Finder",
       Topics: "React (Next) • Node.js (Express) • AWS Lighsail • Postgres • Swagger",
-      Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia nec augue ac aliquam.",
       Link: "",
       Image: require("../img/Construction.png"),
     },
@@ -39,9 +36,9 @@ function Projects() {
         <Project
           title={projects[i].Name}
           topics={projects[i].Topics}
-          desc={projects[i].Desc}
           link={projects[i].Link}
           image={projects[i].Image}
+          height="100%"
         />
       </Grid>
     );
