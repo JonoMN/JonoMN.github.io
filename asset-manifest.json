@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.3b1acd6c.css",
-    "main.js": "/static/js/main.8132092f.js",
+    "main.js": "/static/js/main.6a68c965.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/BNAV MockUp.png": "/static/media/BNAV MockUp.736a6c3cc017bb9c0154.png",
     "static/media/FinanceTracker.png": "/static/media/FinanceTracker.9d39c0b98f92160f3ee5.png",
+    "static/media/ReactHooks.png": "/static/media/ReactHooks.9a680a58dd5f0aeb88ca.png",
     "static/media/Construction.png": "/static/media/Construction.abd2911d3bda38874a60.png",
     "static/media/QUT-Logo.png": "/static/media/QUT-Logo.fba080d38f8921761729.png",
     "index.html": "/index.html",
     "main.3b1acd6c.css.map": "/static/css/main.3b1acd6c.css.map",
-    "main.8132092f.js.map": "/static/js/main.8132092f.js.map",
+    "main.6a68c965.js.map": "/static/js/main.6a68c965.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b1acd6c.css",
-    "static/js/main.8132092f.js"
+    "static/js/main.6a68c965.js"
   ]
 }
