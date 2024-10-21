@@ -2,7 +2,6 @@ import { Container, Grid, Typography, Box, Button, Collapse } from "@mui/materia
 import "../App.css";
 
 import React, { useState, useEffect, useCallback } from "react";
-import QUT from "../img/QUT-Logo.png";
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-particles";
 import TimelineComponent from "../components/Timeline";
@@ -213,6 +212,7 @@ function Home() {
               sx={{ color: "white", borderColor: "white", mr:1}}
               component={Link}
               to="/projects"
+              aria-label="View all projects"
             >
               View All Projects
             </Button>
@@ -222,6 +222,7 @@ function Home() {
               sx={{ color: "white", borderColor: "white" }}
               component={Link}
               to="/blog"
+              aria-label="View all blogs"
             >
               View All Blogs
             </Button>
@@ -263,6 +264,7 @@ function Home() {
               size="small"
               onClick={() => setReadMore(!readMore)}
               sx={{ color: "white", borderColor: "white" }}
+              aria-label={readMore ? "Collapse About Me section" : "Expand About Me section"}
             >
               {readMore ? 'Read Less' : 'Read More'}
             </Button>

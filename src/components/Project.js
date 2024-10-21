@@ -24,7 +24,7 @@ function Project({ title, topics, link, image, height }) {
   return (
     <Card sx={{ display: "flex", height:height}}>
       <CardActionArea onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} component={Link} to={link}>
-        <CardMedia component="img" image={image} />
+        <CardMedia component="img" image={image} alt={title}/>
 
         {isHovered ? (
           <Box

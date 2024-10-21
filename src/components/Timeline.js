@@ -56,7 +56,9 @@ function TimelineComponent() {
             {experience.items.map((item, itemIndex) => (
               <TimelineItem key={itemIndex} onClick={() => handleToggle(expIndex, itemIndex)}>
                 <TimelineSeparator>
-                  <IconButton>
+                  <IconButton
+                    aria-label={collapseStates[expIndex][itemIndex] ? "Collapse section" : "Expand section"}
+                  >
                     {collapseStates[expIndex][itemIndex] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                   </IconButton>
                   {itemIndex < experience.items.length - 1 && <TimelineConnector />}
