@@ -15,7 +15,7 @@ function Blog({ title, date, topics, desc, link }) {
             color="text.secondary"
             component="div"
           >
-            {date}
+            {new Date(date).toLocaleDateString('en-GB')}
           </Typography>
           <Typography
             component="div"
