@@ -19,39 +19,63 @@ function Project({ title, topics, link, image, height }: ProjectCardProps): JSX.
     setIsHovered(false);
   };
 
-  return (
-    <Card sx={{ display: 'flex', height }}>
-      <CardActionArea
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-        component={Link}
-        to={link}
-      >
-        <CardMedia component="img" image={image} alt={title} />
+  const cardContent = (
+    <>
+      <CardMedia 
+        component="img" 
+        image={image} 
+        alt={title}
+        sx={{ 
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover'
+        }}
+      />
 
-        {isHovered ? (
-          <Box
-            className="navbar"
-            sx={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              width: '100%',
-              bgcolor: 'rgba(0, 0, 0, 0.8)',
-              padding: '10px',
-            }}
-          >
-            <Typography variant="h6" color="text.primary">
-              {title}
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-              {topics}
-            </Typography>
-          </Box>
-        ) : (
-          <CardMedia />
-        )}
-      </CardActionArea>
+      {isHovered && (
+        <Box
+          className="navbar"
+          sx={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            bgcolor: 'rgba(0, 0, 0, 0.8)',
+            padding: '10px',
+          }}
+        >
+          <Typography variant="h6" color="text.primary">
+            {title}
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary">
+            {topics}
+          </Typography>
+        </Box>
+      )}
+    </>
+  );
+
+  return (
+    <Card sx={{ display: 'flex', height: height || '250px', width: '100%', position: 'relative' }}>
+      {link ? (
+        <CardActionArea
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+          component={Link}
+          to={link}
+          sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', position: 'relative' }}
+        >
+          {cardContent}
+        </CardActionArea>
+      ) : (
+        <Box
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+          sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', position: 'relative', cursor: 'default' }}
+        >
+          {cardContent}
+        </Box>
+      )}
     </Card>
   );
 }

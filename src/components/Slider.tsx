@@ -7,10 +7,15 @@ interface SlideProps {
   current: number;
   index: number;
   slideWidth: number;
+  imagePadding: string;
+  maxHeight?: string;
+  imageMargin?: string;
 }
 
-const Slide = styled('li')<SlideProps>(({ current, index, slideWidth }) => ({
+const Slide = styled('li')<SlideProps>(({ current, index, slideWidth, imagePadding, maxHeight, imageMargin }) => ({
   display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   opacity: current === index ? 1 : 0.25,
   position: 'relative',
   transition: `
@@ -28,9 +33,12 @@ const Slide = styled('li')<SlideProps>(({ current, index, slideWidth }) => ({
       : {},
   img: {
     width: '100%',
+    height: 'auto',
     opacity: 0,
     transition: 'opacity 0.5s ease-in-out',
-    padding: '0 2vw',
+    padding: imagePadding,
+    ...(imageMargin && { margin: imageMargin }),
+    ...(maxHeight && { maxHeight, objectFit: 'contain' }),
   },
 }));
 
@@ -52,14 +60,18 @@ interface SlideData {
 
 interface SliderProps {
   slides: SlideData[];
+  imagePadding?: string;
+  maxHeight?: string;
+  imageMargin?: string;
+  slideWidth?: number;
 }
 
-function Slider({ slides }: SliderProps): JSX.Element {
+function Slider({ slides, imagePadding = '0 2vw', maxHeight, imageMargin, slideWidth: customSlideWidth }: SliderProps): JSX.Element {
   const [current, setCurrent] = useState<number>(1);
   const theme = useTheme();
   const isMediumUp = useMediaQuery(theme.breakpoints.up('md'));
 
-  const slideWidth = isMediumUp ? 50 : 80;
+  const slideWidth = customSlideWidth ?? (isMediumUp ? 50 : 80);
 
   const handlePreviousClick = (): void => {
     setCurrent((current - 1 + slides.length) % slides.length);
@@ -90,6 +102,9 @@ function Slider({ slides }: SliderProps): JSX.Element {
             current={current}
             index={index}
             slideWidth={slideWidth}
+            imagePadding={imagePadding}
+            maxHeight={maxHeight}
+            imageMargin={imageMargin}
             onClick={() => handleSlideClick(index)}
           >
             <Box>

@@ -7,6 +7,7 @@ import Blog from './pages/Blog';
 import Projects from './pages/Projects';
 import Project2_FinanceTracker from './projects/2_FinanceTracker';
 import Projects1_PeakPerformance from './projects/1_PeakPerformance';
+import Project3_Areta from './projects/3_Areta';
 import BlogPost from './components/BlogPost';
 import { useScrollToTop } from './hooks/useScrollToTop';
 import { THEME_CONFIG } from './constants';
@@ -33,6 +34,7 @@ function App(): JSX.Element {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/finance-tracker" element={<Project2_FinanceTracker />} />
           <Route path="/projects/peak-performance" element={<Projects1_PeakPerformance />} />
+          <Route path="/projects/areta" element={<Project3_Areta />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>

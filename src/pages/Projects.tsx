@@ -1,10 +1,9 @@
-import { Container } from '@mui/system';
 import Project from '../components/Project';
 import Grid from '@mui/material/Grid';
-import { Typography } from '@mui/material';
+import { Typography, Container } from '@mui/material';
 import bnavMockup from '../img/BNAV MockUp.png';
 import financeTracker from '../img/FinanceTracker.png';
-import construction from '../img/Construction.png';
+import areta from '../img/Areta.png';
 import '../App.css';
 
 interface ProjectData {
@@ -28,26 +27,26 @@ const projects: ProjectData[] = [
     image: financeTracker,
   },
   {
-    name: 'Happy Hour Finder',
-    topics: 'React (Next) • Node.js (Express) • AWS Lighsail • Postgres • Swagger',
-    link: '',
-    image: construction,
+    name: 'Areta',
+    topics: 'React Native • TypeScript • Mobile App Development',
+    link: '/projects/areta',
+    image: areta,
   },
 ];
 
 function Projects(): JSX.Element {
   return (
-    <Container>
-      <Typography variant="h3">/ projects</Typography>
-      <Grid container spacing={2}>
+    <Container sx={{ width: '80%', margin: 'auto', px: 4 }}>
+      <Typography variant="h3" sx={{ mb: 4 }}>/ projects</Typography>
+      <Grid container spacing={2} sx={{ alignItems: 'stretch' }}>
         {projects.map((project, index) => (
-          <Grid item xs={12} md={6} xl={4} key={index} sx={{ p: 2 }}>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={index} sx={{ display: 'flex' }}>
             <Project
               title={project.name}
               topics={project.topics}
               link={project.link}
               image={project.image}
-              height="100%"
+              height="250px"
             />
           </Grid>
         ))}
