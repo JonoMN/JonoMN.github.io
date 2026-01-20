@@ -1,45 +1,47 @@
 import { Container, Grid, Typography, Box, Button, Collapse } from '@mui/material';
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { loadSlim } from '@tsparticles/slim';
-import Particles from '@tsparticles/react';
-import type { Engine, Container as ParticlesContainer } from '@tsparticles/engine';
+import { initParticlesEngine } from '@tsparticles/react';
 import TimelineComponent from '../components/Timeline';
 import { EducationCard } from '../components/EducationCard';
 import { CreatedByFooter } from '../components/CreatedByFooter';
 import Project from '../components/Project';
 import { Link } from 'react-router-dom';
-import { FEATURED_PROJECTS, PARTICLES_CONFIG } from '../constants';
+import { FEATURED_PROJECTS } from '../constants';
 import { useScrollOpacity } from '../hooks/useScrollOpacity';
+import ParticlesBackground from '../components/ParticlesBackground';
 import '../App.css';
 
 function Home(): JSX.Element {
   const [readMore, setReadMore] = useState<boolean>(false);
-  const opacity = useScrollOpacity({ range: 500, offset: 700 });
+  const [particlesInit, setParticlesInit] = useState<boolean>(false);
+  const opacity = useScrollOpacity();
+  const particlesRef = useRef<HTMLDivElement>(null);
 
-  const particlesInit = useCallback(async (engine: Engine): Promise<void> => {
-    await loadSlim(engine);
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      console.log('Initializing particles engine...');
+      try {
+        await loadSlim(engine);
+        console.log('Particles engine loaded successfully');
+        setParticlesInit(true);
+      } catch (error) {
+        console.error('Error loading particles engine:', error);
+      }
+    });
   }, []);
 
-  const particlesLoaded = useCallback((container: ParticlesContainer | undefined): void => {
-    // Particles container is ready
-    if (container) {
-      // Optional: Add any initialization logic here if needed
+  // Update opacity directly on the DOM element to avoid re-rendering Particles
+  useEffect(() => {
+    if (particlesRef.current) {
+      particlesRef.current.style.opacity = opacity.toString();
     }
-  }, []);
-
-  // Memoize particles options to prevent unnecessary re-renders
-  const particlesOptions = useMemo(() => PARTICLES_CONFIG, []);
-
-  const backgroundTop = {
-    opacity: opacity,
-    height: '200vh',
-  };
+  }, [opacity]);
 
   return (
-    <div className="gradient_background">
-      <div style={backgroundTop}>
-        <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded} options={particlesOptions} />
-      </div>
+    <>
+      {particlesInit && <ParticlesBackground ref={particlesRef} />}
+      <div className="gradient_background" style={{ position: 'relative', minHeight: '100vh', width: '100%' }}>
       <div
         style={{
           width: '100%',
@@ -180,6 +182,7 @@ function Home(): JSX.Element {
         </Container>
       </div>
     </div>
+    </>
   );
 }
 

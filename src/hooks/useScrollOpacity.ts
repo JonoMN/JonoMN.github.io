@@ -1,32 +1,46 @@
 import { useState, useEffect } from 'react';
 
-interface UseScrollOpacityOptions {
-  range?: number;
-  offset?: number;
-}
-
-export const useScrollOpacity = ({ range = 500, offset = 700 }: UseScrollOpacityOptions = {}): number => {
+export const useScrollOpacity = (): number => {
   const [opacity, setOpacity] = useState<number>(1);
 
   useEffect(() => {
     const handleScroll = (): void => {
-      let calc = 1 - (window.scrollY - offset + range) / range;
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
       
-      if (calc > 1) {
-        calc = 1;
-      } else if (calc < 0) {
-        calc = 0;
-      }
+      // Calculate opacity: starts at 1 (top), fades to 0 after one viewport height
+      // opacity = 1 - (scrollY / viewportHeight)
+      // When scrollY = 0, opacity = 1 (fully visible)
+      // When scrollY = viewportHeight, opacity = 0 (fully invisible)
+      let calc = 1 - scrollY / viewportHeight;
+      
+      // Clamp between 0 and 1
+      calc = Math.max(0, Math.min(1, calc));
       
       setOpacity(calc);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Set initial opacity
+    handleScroll();
+
+    // Use requestAnimationFrame for smoother scroll handling
+    let ticking = false;
+    const optimizedScroll = (): void => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', optimizedScroll, { passive: true });
     
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', optimizedScroll);
     };
-  }, [range, offset]);
+  }, []);
 
   return opacity;
 };
