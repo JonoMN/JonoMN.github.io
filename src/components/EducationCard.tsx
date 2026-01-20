@@ -1,8 +1,8 @@
-import React from 'react';
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import QUTLogo from '../img/QUT-Logo.png';
+import { EducationCardProps } from '../types';
 
-export function EducationCard(props) {
+export function EducationCard({ degree, major }: EducationCardProps): JSX.Element {
   return (
     <Card sx={{ display: 'flex', background: 'rgba(255, 255, 255, 0.10)' }}>
       <Box sx={{ width: { xs: 85, md: 100 }, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -14,9 +14,9 @@ export function EducationCard(props) {
         />
       </Box>
       <CardContent sx={{ flexGrow: 1, p: { xs: 1, md: 1.5 } }}>
-        <Typography variant="h6">{props.degree}</Typography>
+        <Typography variant="h6">{degree}</Typography>
         <Typography variant="body2" color="text.secondary">
-          {props.major}
+          {major}
         </Typography>
       </CardContent>
     </Card>
