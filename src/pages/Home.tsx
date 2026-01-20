@@ -97,12 +97,20 @@ function Home(): JSX.Element {
             <Typography variant="h3" sx={{ mb: 2 }}>
               My Education
             </Typography>
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
-                <EducationCard degree="Bachelor Information Technology" major="Computer Science" />
+            <Grid container spacing={2} sx={{ alignItems: 'stretch', width: '100%' }}>
+              <Grid item xs={12} md={6} sx={{ display: 'flex', minWidth: 0, width: { xs: '100%', md: 'calc(50% - 8px)' } }}>
+                <EducationCard 
+                  degree="Bachelor Information Technology" 
+                  major="Computer Science" 
+                  link="https://www.qut.edu.au/courses/bachelor-of-information-technology"
+                />
               </Grid>
-              <Grid item xs={12} md={6}>
-                <EducationCard degree="Bachelor Business" major="Management" />
+              <Grid item xs={12} md={6} sx={{ display: 'flex', minWidth: 0, width: { xs: '100%', md: 'calc(50% - 8px)' } }}>
+                <EducationCard 
+                  degree="Bachelor Business" 
+                  major="Management" 
+                  link="https://www.qut.edu.au/courses/bachelor-of-business"
+                />
               </Grid>
             </Grid>
           </Box>

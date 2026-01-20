@@ -21,6 +21,7 @@ export interface Project {
 export interface EducationCardProps {
   degree: string;
   major: string;
+  link?: string;
 }
 
 export interface ProjectCardProps {
