@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
-import { GitHub as GitHubIcon, DesignServices as DesignServicesIcon, DataObject as DataObjectIcon } from '@mui/icons-material';
+import { GitHub as GitHubIcon, DesignServices as DesignServicesIcon, Apple as AppleIcon } from '@mui/icons-material';
 import TLDR from '../components/blog/TLDR';
 import BlogTitle from '../components/blog/BlogTitle';
 import BlogPara from '../components/blog/BlogPara';
@@ -30,9 +30,19 @@ function Project(): JSX.Element {
       >
         <BlogTitle>Areta</BlogTitle>
         <Typography sx={{ pb: 3, mt: -2 }} variant="h6" component="div" color="#FF3A20">
-          React Native • TypeScript • Mobile App Development
+          Expo • React Native • Expo Router • React Native Paper • Supabase • TanStack Query
         </Typography>
         <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
+          <Button
+            variant="contained"
+            sx={{ background: 'white', ':hover': { backgroundColor: '#FF3A20', color: 'white' } }}
+            startIcon={<AppleIcon />}
+            href="https://apps.apple.com/au/app/areta/id6757452323"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            App Store
+          </Button>
           <Button
             variant="contained"
             sx={{ background: 'white', ':hover': { backgroundColor: '#FF3A20', color: 'white' } }}
@@ -53,27 +63,17 @@ function Project(): JSX.Element {
           >
             Figma
           </Button>
-          <Button
-            variant="contained"
-            sx={{ background: 'white', ':hover': { backgroundColor: '#FF3A20', color: 'white' } }}
-            startIcon={<DataObjectIcon />}
-            href=""
-            target="_blank"
-            disabled
-          >
-            API Docs
-          </Button>
         </Box>
         <TLDR>
-          Areta is a fitness challenge tracking mobile application built with React Native and TypeScript. The app enables users to participate in competitive fitness challenges, track their progress, and compete on leaderboards.
+          Areta is a monthly fitness challenge mobile application built with Expo, React Native, and TypeScript. The app features one active challenge at a time, where users submit numeric progress during the month. The best submission wins, and leaderboards rank users by best value with earliest achievement as the tie-breaker.
         </TLDR>
         <Grid container>
           <Grid item xs={12}>
             <BlogPara>
-              Areta is a modern mobile fitness challenge application designed to motivate users through competitive challenges. Built with React Native and TypeScript, the app provides a clean and intuitive interface for tracking fitness achievements and competing with others.
+              Areta is a mobile application built with Expo (Managed), React Native, and TypeScript. The app uses Expo Router for navigation, React Native Paper for UI components, Supabase for authentication, database, and security, and TanStack Query for all server data management. The application has been successfully launched to the iOS App Store.
             </BlogPara>
             <BlogPara>
-              The application features a comprehensive challenge system where users can participate in various fitness challenges, submit their progress, and view their rankings on dynamic leaderboards. The app includes a home screen displaying current challenges and personal best scores, a detailed leaderboard view showing rankings and achievements, and a challenges screen for browsing current and upcoming competitions. With its user-friendly design and real-time tracking capabilities, Areta demonstrates modern mobile app development practices and user-centric design principles.
+              The app operates on a monthly challenge system where one challenge is active at a time. Users submit numeric progress throughout the month, and their best submission counts as their score. Leaderboards dynamically rank participants by their best value, with the earliest achievement serving as the tie-breaker. This focused approach eliminates distractions like feeds and photos, keeping the emphasis on performance and improvement.
             </BlogPara>
           </Grid>
         </Grid>

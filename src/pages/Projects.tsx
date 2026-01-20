@@ -15,10 +15,10 @@ interface ProjectData {
 
 const projects: ProjectData[] = [
   {
-    name: 'Peak Performance App (QUT Capstone)',
-    topics: 'React Native • Node.js • Agile Methodologies • Testing Practices • System Architecture Design',
-    link: '/projects/peak-performance',
-    image: bnavMockup,
+    name: 'Areta',
+    topics: 'Expo • React Native • Expo Router • React Native Paper • Supabase • TanStack Query',
+    link: '/projects/areta',
+    image: areta,
   },
   {
     name: 'Live Finance Tracker',
@@ -27,10 +27,10 @@ const projects: ProjectData[] = [
     image: financeTracker,
   },
   {
-    name: 'Areta',
-    topics: 'React Native • TypeScript • Mobile App Development',
-    link: '/projects/areta',
-    image: areta,
+    name: 'Peak Performance App (QUT Capstone)',
+    topics: 'React Native • Node.js • Agile Methodologies • Testing Practices • System Architecture Design',
+    link: '/projects/peak-performance',
+    image: bnavMockup,
   },
 ];
 

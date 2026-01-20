@@ -67,7 +67,7 @@ interface SliderProps {
 }
 
 function Slider({ slides, imagePadding = '0 2vw', maxHeight, imageMargin, slideWidth: customSlideWidth }: SliderProps): JSX.Element {
-  const [current, setCurrent] = useState<number>(1);
+  const [current, setCurrent] = useState<number>(0);
   const theme = useTheme();
   const isMediumUp = useMediaQuery(theme.breakpoints.up('md'));
 

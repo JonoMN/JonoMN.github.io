@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -64,12 +63,7 @@ const BlogPost = (): JSX.Element => {
         {post.title}
       </Typography>
 
-      <Container
-        sx={{
-          pt: 2,
-          pb: 2,
-        }}
-      >
+      <Box sx={{ mb: 3 }}>
         <Card
           sx={{
             background: 'rgba(255, 255, 255, .10)',
@@ -82,7 +76,7 @@ const BlogPost = (): JSX.Element => {
           </Typography>
           <Typography>{post.desc}</Typography>
         </Card>
-      </Container>
+      </Box>
       <ReactMarkdown
         components={{
           a: ({ node, ...props }) => <a style={{ color: 'white' }} {...props} />,

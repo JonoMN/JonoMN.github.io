@@ -1,6 +1,6 @@
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 import { ReactNode } from 'react';
 
 interface TLDRProps {
@@ -9,12 +9,7 @@ interface TLDRProps {
 
 function TLDR({ children }: TLDRProps): JSX.Element {
   return (
-    <Container
-      sx={{
-        pt: 2,
-        pb: 2,
-      }}
-    >
+    <Box sx={{ mb: 3 }}>
       <Card
         sx={{
           display: 'flex',
@@ -29,7 +24,7 @@ function TLDR({ children }: TLDRProps): JSX.Element {
           {children}
         </Typography>
       </Card>
-    </Container>
+    </Box>
   );
 }
 
