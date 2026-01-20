@@ -48,15 +48,6 @@ const experiences: Experience[] = [
     type: 'Leadership & Service',
     items: [
       {
-        startDate: 'Jan 2024',
-        endDate: 'Present',
-        duration: 'Currently',
-        role: 'Young Tech Ambassador',
-        company: 'Australian Computer Society',
-        description:
-          "Participant in the ACS Young Tech Ambassador (YTA) Program, helping high school students get excited about tech careers while boosting leadership and communication skills.",
-      },
-      {
         startDate: '2024',
         endDate: '2025',
         duration: '2024 – 2025',
@@ -64,6 +55,15 @@ const experiences: Experience[] = [
         company: 'Australian Computer Society',
         description:
           'Leading the ACS Queensland Emerging Professionals Committee, which supports and encourages students and recent graduates interested in technology careers to engage with the local ACS Queensland ICT Community.',
+      },
+      {
+        startDate: 'Jan 2024',
+        endDate: 'Present',
+        duration: 'Currently',
+        role: 'Young Tech Ambassador',
+        company: 'Australian Computer Society',
+        description:
+          "Participant in the ACS Young Tech Ambassador (YTA) Program, helping high school students get excited about tech careers while boosting leadership and communication skills.",
       },
       {
         startDate: '2022',

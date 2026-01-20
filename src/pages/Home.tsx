@@ -90,6 +90,35 @@ function Home(): JSX.Element {
           </Box>
 
           <Box sx={{ mb: 10 }}>
+            <Box
+              sx={{
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '56.25%', // 16:9 aspect ratio
+                height: 0,
+                overflow: 'hidden',
+                borderRadius: 2,
+                mb: 2,
+              }}
+            >
+              <iframe
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 0,
+                }}
+                src="https://www.youtube.com/embed/ZzFKbEzzwyY?start=1"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </Box>
+          </Box>
+
+          <Box sx={{ mb: 10 }}>
             <TimelineComponent />
           </Box>
 
