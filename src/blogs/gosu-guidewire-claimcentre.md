@@ -7,11 +7,11 @@ desc: "Gosu is a statically typed programming language built by Guidewire Softwa
 
 ## Introduction
 
-I recently came across mentions of "Gosu" and "Guidewire ClaimCentre" in some job postings and technical discussions, and I had absolutely no idea what either of these were. Are they related? Is Gosu some kind of gaming term? What does ClaimCentre actually do? Time to dive in and figure out what these technologies are all about.
+I recently came across mentions of "Gosu" and "Guidewire ClaimCentre" in some job postings and technical discussions, and I had absolutely no idea what either of these were. Time to dive in and figure out what these technologies are all about.
 
 ## ❓ What is Gosu?
 
-Gosu is a programming language—specifically, a statically typed, general-purpose language that runs on the Java Virtual Machine (JVM). 
+Gosu is a programming language,specifically, a statically typed, general-purpose language that runs on the Java Virtual Machine (JVM). 
 
 ### Key Features of Gosu
 
@@ -34,7 +34,7 @@ Gosu was designed specifically to address the needs of enterprise software, part
 
 Guidewire Software is a company that provides software solutions for the Property & Casualty (P&C) insurance industry. They've built a comprehensive suite of products called InsuranceSuite, which includes:
 
-- **PolicyCenter**: Manages policy administration—creating, updating, and managing insurance policies
+- **PolicyCenter**: Manages policy administration, creating, updating, and managing insurance policies
 - **BillingCenter**: Handles billing, payments, and financial transactions
 - **ClaimCentre**: Manages the entire claims lifecycle
 
@@ -42,13 +42,13 @@ All of these products are built using Gosu as their primary programming language
 
 ## ❓ What is Guidewire ClaimCentre?
 
-ClaimCentre is Guidewire's claims management system—a comprehensive platform that insurance companies use to handle everything related to insurance claims from start to finish.
+ClaimCentre is Guidewire's claims management system, a comprehensive platform that insurance companies use to handle everything related to insurance claims from start to finish.
 
 ### What does ClaimCentre do?
 
 When someone files an insurance claim (like a car accident, property damage, or liability claim), ClaimCentre manages the entire process:
 
-1. **First Notice of Loss (FNOL)**: When a claim is first reported, ClaimCentre captures all the initial information—who, what, when, where, and how the incident occurred.
+1. **First Notice of Loss**: When a claim is first reported, ClaimCentre captures all the initial information, who, what, when, where, and how the incident occurred.
 
 2. **Investigation**: The system helps claims adjusters investigate the claim by:
    - Assigning tasks and activities
@@ -72,4 +72,4 @@ When someone files an insurance claim (like a car accident, property damage, or 
 
 ## Conclusion
 
-So there you have it—Gosu and Guidewire ClaimCentre are technologies deeply embedded in the insurance industry. Gosu is a specialized programming language designed to handle the complex business logic that insurance companies need, and ClaimCentre is a comprehensive platform that uses Gosu to manage insurance claims from start to finish.
+So there you have it, Gosu and Guidewire ClaimCentre are technologies deeply embedded in the insurance industry. Gosu is a specialized programming language designed to handle the complex business logic that insurance companies need, and ClaimCentre is a comprehensive platform that uses Gosu to manage insurance claims from start to finish.

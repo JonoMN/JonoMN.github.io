@@ -68,11 +68,14 @@ function Home(): JSX.Element {
               About Me
             </Typography>
             <Typography variant="body1" sx={{ mb: 2 }}>
-              Full-Stack Software Engineer with experience designing, developing, testing, and supporting enterprise web and mobile applications in production environments. Strong background in backend API development, microservice-based systems, and CI/CD pipelines, with hands-on experience supporting live systems and resolving defects.
+                Full-Stack Software Engineer experienced in developing and supporting web and mobile applications across frontend and backend systems.  
             </Typography>
+            <Typography variant="body1" sx={{ mb: 2 }}>
+                Strong background in React, React Native, and Svelte, building responsive and accessible interfaces with a focus on performance and WCAG compliance. Backend experience includes C# and .NET, RESTful API development, secure authentication and authorisation, SQL and relational databases, microservice-based systems, and full-stack automated testing.
+              </Typography>
             <Collapse in={readMore}>
               <Typography variant="body1" sx={{ mb: 2 }}>
-                Experienced in .NET, C#, RESTful services, SQL, and automated testing, with a strong willingness and proven ability to learn new enterprise platforms and technologies such as Java, Spring Boot, and Guidewire. Currently working as a Graduate Developer at the Australian College of Rural and Remote Medicine, where I analyse system requirements, contribute to technical design, develop backend REST APIs, and support production systems.
+                In my current role at the Australian College of Rural and Remote Medicine, I contribute to enterprise-scale systems with a strong focus on React, C#, RESTful APIs, and SQL-based data access. I work closely within cross-functional agile teams alongside designers, product owners, and business stakeholders to deliver solutions that are robust, scalable, and easy to maintain. My responsibilities include contributing to technical design, writing clean and testable code, developing unit and integration tests, and supporting live production systems by investigating and resolving defects.
               </Typography>
               <Typography variant="body1" sx={{ mb: 2 }}>
                 I hold dual degrees in Information Technology (Computer Science) and Business (Management) from Queensland University of Technology, completed in November 2023. My capstone project involved developing a greenfield mobile application for BusinessNav, a financial consulting firm, focused on improving workplace performance. Beyond technical skills, I'm actively involved in the tech community as Chair of the ACS Emerging Professionals Committee and a participant in the ACS Young Tech Ambassador Program.
